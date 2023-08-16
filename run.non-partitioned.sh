@@ -33,6 +33,7 @@ kill -15 $CONSUMER_PID && unset CONSUMER_PID && sleep 1
 echo "\n\nSTEP_3::VERIFICATION\n\n" && sleep 3
 echo "Verifing messages on the topic"
 kubectl exec --namespace pulsar -t pulsar-toolset-0 -- bin/pulsar-perf read $TOPIC
+# kubectl exec --namespace pulsar -t pulsar-toolset-0 -- bin/pulsar-admin topics stats-internal $TOPIC
 
 # Wait for CTRL+C
 sleep 1000000
