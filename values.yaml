@@ -1,4 +1,4 @@
-defaultPulsarImageTag: 3.0.1
+defaultPulsarImageTag: 3.1.0
 
 affinity:
   anti_affinity: false
@@ -44,6 +44,7 @@ broker:
     managedLedgerDefaultEnsembleSize: "2"
     managedLedgerDefaultWriteQuorum: "2"
     managedLedgerDefaultAckQuorum: "2"
+    brokerDeleteInactiveTopicsEnabled: "false"
 
 proxy:
   replicaCount: 3
